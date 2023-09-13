@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Active Products</h1>
+    {% for product in products %}
+        <h4> Company Name : {{product.employe.companyName}} </h4>
+            Employee Name: {{ product.employe }}<br>
+            Product : {{ product.product }}<br>
+            Initial Condition : {{ product.takenQuality}} <br>
+            Taken Time: {{ product.takenTime }}<br>
+            
+    {% endfor %}
+
+    <h1>Return Products</h1>
+    {% for product in inproducts %}
+        <h4> Company Name : {{product.employe.companyName}} </h4>
+            Employee Name: {{ product.employe }}<br>
+            Product : {{ product.product }}<br>
+            Initial Condition : {{ product.takenQuality}} <br>
+            Taken Time: {{ product.takenTime }}<br>
+            Return time : {{ product.returnTime }}<br> 
+            Return Condition: {{product.returnQuality }}
+            <hr>
+            
+    {% endfor %}
+
+</body>
+</html>
